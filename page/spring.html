@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>봄날은 간다, 김윤아</title>
+  <style type="text/css">
+    @font-face {
+      font-family: 'MaruBuri';
+      src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"),
+           url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"),
+           url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+    }
+    html {
+      font-family: 'MaruBuri', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      line-height: 190%;
+      text-align: center;
+    }
+    section { padding-top: 50px; }
+    .wrap { width: 1000px; margin: auto; }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      transition: transform 0.1s linear;
+    }
+    .rotating {
+      animation: spin 20s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .play-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .play-button button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      padding: 0;
+    }
+    .play-button svg {
+      width: 100%;
+      height: 100%;
+      fill: #333;
+      transition: transform 0.2s ease;
+    }
+    .play-button svg:hover {
+      transform: scale(1.1);
+    }
+    .back-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration: none;
+        z-index: 1000;
+        user-select: none;
+      }
+    .back-button:hover {
+        background: rgba(0,0,0,0.8);
+      }
+  </style>
+</head>
+<a href="../index.html" class="back-button">뒤로가기</a>
+<body>
+  <div class="wrap">
+  	 <section style="padding-bottom: 10px;">
+      <p>봄날은 간다, 김윤아</p>
+    </section>
+    <section>
+      <img id="album-cover" src="zimg/spring-LP.png" alt="앨범 커버" />
+      <div class="play-button">
+        <button id="play-btn" aria-label="Play music">
+          <!-- ▶️ 아이콘 (SVG) -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </div>
+      <audio id="spring-audio" src="zimg/봄날은 간다-김윤아.mp3"></audio>
+      <p style="padding-top: 100px;">
+        눈을 감으면 문득 그리운 날의 기억<br />
+        아직까지도 마음이 저려 오는 건<br />
+        그건 아마 사람도 피고 지는 꽃처럼<br />
+        아름다워서 슬프기 때문일 거야<br />
+        아마도
+      </p>
+    </section>
+    <section>
+      <p>봄날은 가네 무심히도<br>
+        꽃잎은 지네 바람에<br>
+        머물 수 없던 아름다운 사람들</p>
+    </section>
+    <section>
+      <p>가만히 눈감으면 잡힐 것 같은<br>
+        아련히 마음 아픈 추억 같은 것들</p>
+    </section>
+    <section>
+      <p>봄은 또 오고 꽃은 피고 또 지고 피고<br>
+        아름다워서 너무나 슬픈 이야기</p>
+    </section>
+    <section>
+      <p>봄날은 가네 무심히도<br>
+        꽃잎은 지네 바람에<br>
+        머물 수 없던 아름다운 사람들</p>
+    </section>
+    <section>
+      <p>가만히 눈감으면 잡힐 것 같은<br>
+        아련히 마음 아픈 추억 같은 것들</p>
+    </section>
+    <section style="padding-bottom: 200px;">
+      <p>눈을 감으면 문득 그리운 날의 기억<br>
+        아직까지도 마음이 저려 오는 건<br>
+        그건 아마 사람도 피고 지는 꽃처럼<br>
+        아름다워서 슬프기 때문일 거야<br>
+        아마도</p>
+    </section>
+  </div>
+
+  <script>
+    const playBtn = document.getElementById('play-btn');
+    const audio = document.getElementById('spring-audio');
+    const albumCover = document.getElementById('album-cover');
+
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play().catch(e => {
+          console.log("재생 실패:", e);
+          alert("오디오 재생이 차단되었습니다. 페이지를 다시 로드하거나 다른 브라우저를 사용해보세요.");
+        });
+        albumCover.classList.add('rotating');
+        playBtn.innerHTML = `
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6h4v12H6zm8 0h4v12h-4z"/>
+          </svg>
+        `;
+      } else {
+        audio.pause();
+        albumCover.classList.remove('rotating');
+        playBtn.innerHTML = `
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        `;
+      }
+    });
+
+    audio.addEventListener('ended', () => {
+      albumCover.classList.remove('rotating');
+      playBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      `;
+    });
+  </script>
+</body>
+</html>

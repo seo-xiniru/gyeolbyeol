@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>들꽃놀이, RM(feat. 조유진)</title>
+<style type="text/css">
+	 @font-face {
+      font-family: 'MaruBuri';
+      src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"),
+           url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"),
+           url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");}
+    @font-face {
+    font-family: 'SeoulHangangM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulHangangM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'ChosunKm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+
+    html{font-family: 'MaruBuri', sans-serif; margin: 0; padding: 0;
+       height: 100%; line-height: 190%; text-align: center;}
+    section{padding-top: 50px;}
+	.wrap{width: 1000px; margin: auto;}
+	 img {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      transition: transform 0.1s linear;
+    }
+    .rotating {
+      animation: spin 20s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .play-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .play-button button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      padding: 0;
+    }
+    .play-button svg {
+      width: 100%;
+      height: 100%;
+      fill: #333;
+      transition: transform 0.2s ease;
+    }
+    .play-button svg:hover {
+      transform: scale(1.1);
+    }
+	.back-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration: none;
+        z-index: 1000;
+        user-select: none;
+      }
+    .back-button:hover {
+        background: rgba(0,0,0,0.8);
+      }
+</style>
+</head>
+<a href="../index.html" class="back-button">뒤로가기</a>
+<body>
+	<div class="wrap">
+  	 <section style="padding-bottom: 10px;">
+      <p>들꽃놀이, RM(w.조유진)</p>
+    </section>
+    <section>
+      <img id="album-cover" src="zimg/flowerwork-LP.png" alt="앨범 커버" />
+      <div class="play-button">
+        <button id="play-btn" aria-label="Play music">
+          <!-- ▶️ 아이콘 (SVG) -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </div>
+      <audio id="spring-audio" src="zimg/들꽃놀이-RM.mp3"></audio>
+    	<section>
+			<p style="padding-top: 50px;">
+			Flower field, that's where I'm at <br>
+Open land, that's where I'm at <br>
+No name, that's what I have <br>
+No shame, I'm on my grave
+</P>
+		</section>
+		<section>
+			<p>두 발이 땅에 닿지 않을 때<br>
+당신의 마음이 당신을 넘볼 때<br>
+꿈이 나를 집어삼킬 때<br>
+내가 내가 아닐 때<br>
+그 모든 때</p>
+		</section>
+		<section>
+			<p>불꽃을 나는 동경했었네<br>
+그저 화려하게 지고 싶었네<br>
+시작의 전부터 나 상상했었지<br>
+끝엔 웃으며 박수 쳐 줄 수 있길</p>
+		</section>
+		<section>
+			<p>나 소원했었네 믿었던 게 다 멀어지던 때<br>
+이 모든 명예가 이젠 멍에가 됐을 때<br>
+이 욕심을 제발 거둬가소서 어떤 일이 있어도<br>
+Oh, 나를 나로 하게 하소서</p>
+		</section>
+		<section>
+			<p>Oh everyday and every night<br>
+Persistin' pain and criminal mind<br>
+내 심장소리에 잠 못 들던 밤<br>
+창밖에 걸린 청승맞은 초승달</p>
+		</section>
+		<section>
+			<p>I do wish me a lovely night<br>
+내 분수보다 비대해진 life <br>
+저기 날아오르는 풍선을 애써 쥐고<br>
+따져 물어 대체 지금 넌 어디에?<br>
+Where you go? Where's your soul<br>
+Yo where's your dream?</p>
+		</section>
+		<section>
+			<p>저 하늘에 흩어질래<br>
+Light a flower, flowerwork<br>
+Flower, flowerwork<br>
+저 하늘에 눈부시게<br>
+Light a flower, flowerwork<br>
+Flower, flowerwork</p>
+		</section>
+		<section>
+			<p>그 어디까지가 내 마지막일까?<br>
+전부 진저리 나, 하나 열까지 다<br>
+이 지긋지긋한 가면은 언제 벗겨질까?<br>
+Yeah me no hero, me no villain<br>
+아무것도 아닌 나</p>
+		</section>
+		<section>
+			<p>공회전은 반복돼 기억들은 난폭해<br>
+난 누워 들판 속에 시선을 던져 하늘 위에<br>
+뭘 원했었던 건지? 이제 기억이 안 나<br>
+얻었다 믿었던 모든 행복은 겨우 찰나</p>
+		</section>
+		<section>
+			<p>Yeah, I been goin', no matter what's in front<br>
+				그게 뭐가 됐건<br>
+				새벽의 옷자락을 붙잡고<br>
+				뭔가 토해내던 기억<br>
+목소리만 큰 자들의 사회<br>
+난 여전히 침묵을 말해<br>
+이건 방백, 완숙한 돛단배 <br>
+모든 오해 편견들에 닿게</p>
+		</section>
+		<section>
+			<p>반갑지 않아 너의 헹가래<br>
+내 두 발이 여기 땅 위에 (ayy)<br>
+이름도 없는 꽃들과 함께<br>
+다신 별에 갈 수 없어 I can't<br>
+발밑으로 I just go<br>
+목적 없는 목적지로 슬픈 줄도 모르고<br>
+그림자마저 친구로 I be gone</p>
+		</section>
+		<section>
+			<p>저 하늘에 흩어질래<br>
+Light a flower, flowerwork<br>
+Flower, flowerwork<br>
+저 하늘에 눈부시게<br>
+Light a flower, flowerwork<br>
+Flower, flowerwork</p>
+		</section>
+		<section>
+			<p>문득 멈춰보니 찬란한 맨발<br>
+원래 내 것은 아무것도 없었지 <br>
+And don't tell me like you gotta be someone<br>
+난 절대 그들처럼 될 수 없으니<br>
+ (light a flower)<br>
+그래 내 시작은 시</p>
+		</section>
+		<section>
+			<p>여태껏 날 지켜온 단 하나의 힘과 dream <br>
+				(light a flower)<br>
+타는 불꽃에서 들꽃으로 소년에서 영원으로<br>
+나 이 황량한 들에 남으리<br>
+Ah, 언젠가 나 되돌아가리</p>
+		</section>
+		<section>
+			<p>저 하늘에 흩어질래 <br>
+Light a flower, flowerwork<br>
+Flower, flowerwork<br>
+저 하늘에 눈부시게<br>
+Light a flower, flowerwork<br>
+Flower, flowerwork</p>
+		</section>
+		<section>
+			<p>Flower field, that's where I'm at<br>
+Open land, that's where I'm at<br>
+No name, that's what I have<br>
+No shame, I'm on my grave<br>
+</p>
+		</section>
+		<section style="padding-bottom: 200px;">
+			<p>두 발이 땅에 닿지 않을 때<br>
+당신의 마음이 당신을 넘볼 때<br>
+꿈이 나를 집어삼킬 때<br>
+ 내가 내가 아닌 때<br>
+그 모든 때
+</p>
+	</section>
+	</div>
+<script>
+    const playBtn = document.getElementById('play-btn');
+    const audio = document.getElementById('spring-audio');
+    const albumCover = document.getElementById('album-cover');
+
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play().catch(e => {
+          console.log("재생 실패:", e);
+          alert("오디오 재생이 차단되었습니다. 페이지를 다시 로드하거나 다른 브라우저를 사용해보세요.");
+        });
+        albumCover.classList.add('rotating');
+        playBtn.innerHTML = `
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6h4v12H6zm8 0h4v12h-4z"/>
+          </svg>
+        `;
+      } else {
+        audio.pause();
+        albumCover.classList.remove('rotating');
+        playBtn.innerHTML = `
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        `;
+      }
+    });
+
+    audio.addEventListener('ended', () => {
+      albumCover.classList.remove('rotating');
+      playBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      `;
+    });
+  </script>
+</body>
+</html>
